@@ -3,7 +3,7 @@ h1. logback-plotmachine a logback appender for PlotMachine
 h2. Introduction
 
 logback-plotmachine is a "logback":http://logback.qos.ch appender for "PlotMachine":http://plotmachine.org.
-The appender sends HTTP calls to a "PlotMachine":http://plotmachine.org server for every log Event.
+The appender sends asynchronous non blocking HTTP calls to a "PlotMachine":http://plotmachine.org server for every log Event.
 It uses the Logger name as the name and the message as the value.
 
 h2. Example:
