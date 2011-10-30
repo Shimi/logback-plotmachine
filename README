@@ -1,0 +1,31 @@
+logback-plotmachine is a http://logback.qos.ch appender for PlotMachine.
+The appender sends HTTP calls to a PlotMachine server for every log Event.
+It uses the Logger name as the name and the message as the value.
+
+Example:
+
+<pre>
+public class MyClass {
+  Logger logger  = LoggerFactory.getLogger("UpdateTime");
+  
+  public void myMethod() {
+ 
+    // long time = ... get the time
+    long time = 10;
+    logger.info(time);
+  }
+}
+</pre>
+
+<pre>
+<configuration scan="false" debug="false">
+  <appender name="plotmachine" class="me.shimi.logback.PlotMachineAppender">
+    <ApiUrl>http://mydomain/PlotMachine/api/monitor/data/add?</ApiUrl>
+  </appender>
+  <root level="INFO">
+    <appender-ref ref="plotmachine" />
+  </root>
+</configuration>
+</pre>
+
+The appender will make HTTP call to <pre>http://mydomain/PlotMachine/api/monitor/data/add?name=UpdateTime&value=10</pre>
