@@ -24,7 +24,7 @@ public class MyClass {
 <pre>
 <configuration scan="false" debug="false">
   <appender name="plotmachine" class="me.shimi.logback.PlotMachineAppender">
-    <ApiUrl>http://mydomain/PlotMachine/api/monitor/data/add?</ApiUrl>
+    <ApiUrl>http://mydomain/PlotMachine/api/monitor/data/add?&lt;/ApiUrl&gt;
   </appender>
   <root level="INFO">
     <appender-ref ref="plotmachine" />
@@ -32,7 +32,7 @@ public class MyClass {
 </configuration>
 </pre>
 
-The appender will make HTTP call to <pre>http://mydomain/PlotMachine/api/monitor/data/add?name=UpdateTime&value=10</pre>
+The appender will make HTTP call to <pre>http://mydomain/PlotMachine/api/monitor/data/add?name=UpdateTime&amp;value=10</pre>
 
 h2. Dependencies
 
@@ -40,4 +40,3 @@ h2. Dependencies
 * "SLF4J":http://www.slf4j.org
 * "netty":http://www.jboss.org/netty
 * "async-http-client":http://github.com/sonatype/async-http-client
-
