@@ -1,8 +1,12 @@
-logback-plotmachine is a http://logback.qos.ch appender for PlotMachine.
-The appender sends HTTP calls to a PlotMachine server for every log Event.
+h1. logback-plotmachine a logback appender for PlotMachine
+
+h2. Introduction
+
+logback-plotmachine is a "logback":http://logback.qos.ch appender for "PlotMachine":http://plotmachine.org.
+The appender sends HTTP calls to a "PlotMachine":http://plotmachine.org server for every log Event.
 It uses the Logger name as the name and the message as the value.
 
-Example:
+h2. Example:
 
 <pre>
 public class MyClass {
@@ -29,3 +33,10 @@ public class MyClass {
 </pre>
 
 The appender will make HTTP call to <pre>http://mydomain/PlotMachine/api/monitor/data/add?name=UpdateTime&value=10</pre>
+
+h2. Dependencies
+
+* "logback":http://logback.qos.ch
+* "SLF4J":http://www.slf4j.org
+* "netty":http://www.jboss.org/netty
+* "async-http-client":http://github.com/sonatype/async-http-client
