@@ -34,6 +34,28 @@ public class MyClass {
 
 The appender will make HTTP call to <pre>http://mydomain/PlotMachine/api/monitor/data/add?name=UpdateTime&amp;value=10</pre>
 
+h2. Installation
+
+You can download the jar from the Downloads section or setup your maven configuration with the following settings:
+
+<pre>
+	<repositories>
+		<repository>
+			<id>Shimi</id>
+			<name>Shimi Snapshot Repo</name>
+			<url>https://github.com/Shimi/shimi-mvn-repo/tree/master/snapshots</url>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+		<dependency>
+			<groupId>me.shimi.logback</groupId>
+			<artifactId>logback-plotmachine</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+</pre>
+
 h2. Dependencies
 
 * "logback":http://logback.qos.ch

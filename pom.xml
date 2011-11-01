@@ -14,6 +14,7 @@
 		</developer>
 	</developers>
 
+  <url>https://github.com/Shimi/logback-plotmachine</url>
 
 	<repositories>
 		<repository>
@@ -51,4 +52,16 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	
+	<distributionManagement>
+		<repository>
+			<id>repo</id>
+			<url>https://github.com/Shimi/shimi-mvn-repo/tree/master/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot-repo</id>
+			<url>https://github.com/Shimi/shimi-mvn-repo/tree/master/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
