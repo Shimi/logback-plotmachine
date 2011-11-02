@@ -35,7 +35,7 @@ public class PlotMachineAppender extends UnsynchronizedAppenderBase<ILoggingEven
 		String key = event.getLoggerName();
 		try {
 			String name = event.getMessage();
-			Double.parseDouble(name);
+			Long.parseLong(name);
 			sendToPlotMachine(key, name);
 		} catch(NumberFormatException e) {
 			addError("Message should be double", e);
